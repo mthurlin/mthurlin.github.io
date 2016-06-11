@@ -1,6 +1,14 @@
+"use strict";
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var PlayerExpand = function (props) {
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PlayerExpand = function PlayerExpand(props) {
     var elements = props.player.scores.map(function (score, i) {
 
         var className = "player-expand-0p";
@@ -23,37 +31,48 @@ var PlayerExpand = function (props) {
     );
 };
 
-class LeaderboardPlayer extends React.Component {
+var LeaderboardPlayer = function (_React$Component) {
+    _inherits(LeaderboardPlayer, _React$Component);
 
-    constructor(props) {
-        super(props);
-        this.state = { expand: false };
+    function LeaderboardPlayer(props) {
+        _classCallCheck(this, LeaderboardPlayer);
+
+        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(LeaderboardPlayer).call(this, props));
+
+        _this.state = { expand: false };
+        return _this;
     }
 
-    toggle() {
-        this.setState({ expand: !this.state.expand });
-    }
+    _createClass(LeaderboardPlayer, [{
+        key: "toggle",
+        value: function toggle() {
+            this.setState({ expand: !this.state.expand });
+        }
+    }, {
+        key: "render",
+        value: function render() {
+            var p = this.props.player;
 
-    render() {
-        var p = this.props.player;
-
-        var expand = this.state.expand ? React.createElement(PlayerExpand, { player: p }) : null;
-        return React.createElement(
-            "div",
-            { onClick: this.toggle.bind(this) },
-            React.createElement(
+            var expand = this.state.expand ? React.createElement(PlayerExpand, { player: p }) : null;
+            return React.createElement(
                 "div",
-                { className: "leaderboard-player" },
-                p.score,
-                "p - ",
-                p.name
-            ),
-            expand
-        );
-    }
-}
+                { onClick: this.toggle.bind(this) },
+                React.createElement(
+                    "div",
+                    { className: "leaderboard-player" },
+                    p.score,
+                    "p - ",
+                    p.name
+                ),
+                expand
+            );
+        }
+    }]);
 
-var Leaderboard = () => {
+    return LeaderboardPlayer;
+}(React.Component);
+
+var Leaderboard = function Leaderboard() {
     var p = players.map(function (player) {
         return React.createElement(LeaderboardPlayer, { key: player.name, player: player });
     });
@@ -65,9 +84,9 @@ var Leaderboard = () => {
     );
 };
 
-var Upcoming = props => {
+var Upcoming = function Upcoming(props) {
     var match = props.match;
-    var guesses = players.map(p => {
+    var guesses = players.map(function (p) {
         var guess = p.guesses[match];
         return React.createElement(
             "tr",
@@ -104,8 +123,8 @@ var Upcoming = props => {
     );
 };
 
-var App = () => {
-    var upcoming = Object.keys(results).map(match => {
+var App = function App() {
+    var upcoming = Object.keys(results).map(function (match) {
         var result = results[match];
         if (result) {
             return null;

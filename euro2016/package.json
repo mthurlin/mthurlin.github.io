@@ -5,11 +5,12 @@
   "main": "app.js",
   "devDependencies": {
     "babel": "^6.5.2",
-    "babel-plugin-transform-react-jsx": "^6.8.0"
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "transform": "node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx ui.jsx > ui.js"
+    "transform": "node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx --presets es2015 ui.jsx > ui.js"
   },
   "author": "",
   "license": "ISC"
