@@ -145,5 +145,5 @@ var App = function App() {
     );
 };
 
-appRoot = React.createElement(App, null);
+window.appRoot = React.createElement(App, null);
 

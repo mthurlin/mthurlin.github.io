@@ -80,4 +80,4 @@ var App = () => {
     );
 };
 
-appRoot = <App />;
+window.appRoot = <App />;

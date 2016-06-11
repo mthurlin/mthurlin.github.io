@@ -52,9 +52,7 @@ players.sort(function (a, b) {
 });
 
 
-
-
-ReactDOM.render(appRoot, document.getElementById("root"));
+ReactDOM.render(window.appRoot, document.getElementById("root"));
 
 
 
