@@ -1,0 +1,16 @@
+{
+  "name": "euro2016",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-plugin-transform-react-jsx": "^6.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "transform": "node_modules/babel-cli/bin/babel.js --plugins transform-react-jsx ui.jsx > ui.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
