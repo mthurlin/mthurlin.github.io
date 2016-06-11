@@ -18,10 +18,17 @@ var PlayerExpand = function PlayerExpand(props) {
             className = "player-expand-3p";
         }
 
+        var pos = score.indexOf("(guessed");
+
+        var match = score.substr(0, pos - 1);
+        var guess = score.substr(pos);
+
         return React.createElement(
             "div",
             { className: className, key: i },
-            score
+            match,
+            React.createElement("br", null),
+            guess
         );
     });
     return React.createElement(

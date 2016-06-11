@@ -11,7 +11,13 @@ var PlayerExpand = function (props) {
             className = "player-expand-3p";
         }
 
-         return <div className={className} key={i}>{score}</div>
+        var pos = score.indexOf("(guessed");
+
+        var match = score.substr(0, pos - 1);
+        var guess = score.substr(pos);
+
+
+        return <div className={className} key={i}>{match}<br/>{guess}</div>
     });
     return <div className="player-expands">{elements}</div>;
 };
