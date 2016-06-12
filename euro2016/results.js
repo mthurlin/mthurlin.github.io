@@ -3,7 +3,7 @@ results = {
     "Albania - Switzerland": "0-1",
     "Wales - Slovakia": "2-1",
     "England - Russia": "1-1",
-    "Turkey - Croatia": null,
+    "Turkey - Croatia": "0-1",
     "Poland - Northern Ireland": null,
     "Germany - Ukraine": null,
     "Spain - Czech Republic": null,
