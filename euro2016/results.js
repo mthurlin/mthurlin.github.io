@@ -10,7 +10,7 @@ results = {
     "Ireland - Sweden": "1-1",
     "Belgium - Italy": "0-2",
     "Austria - Hungary": "0-2",
-    "Portugal - Iceland": null,
+    "Portugal - Iceland": "1-1",
     "Russia - Slovakia": null,
     "Romania - Switzerland": null,
     "France - Albania": null,
