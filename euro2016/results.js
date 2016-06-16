@@ -14,7 +14,7 @@ results = {
     "Russia - Slovakia": "1-2",
     "Romania - Switzerland": "1-1",
     "France - Albania": "2-0",
-    "England - Wales": null,
+    "England - Wales": "2-1",
     "Ukraine - Northern Ireland": null,
     "Germany - Poland": null,
     "Italy - Sweden": null,
