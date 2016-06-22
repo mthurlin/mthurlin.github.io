@@ -31,8 +31,8 @@ results = {
     "Ukraine - Poland": "0-1",
     "Croatia - Spain": "2-1",
     "Czech Republic - Turkey": "0-2",
-    "Hungary - Portugal": null,
-    "Iceland - Austria": null,
+    "Hungary - Portugal": "3-3",
+    "Iceland - Austria": "2-1",
     "Sweden - Belgium": null,
     "Italy - Ireland": null
 };
